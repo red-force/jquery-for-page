@@ -52,7 +52,7 @@
 				var that = this;
 				options = $.extend({
 						type: 'POST',
-						url: location.href + (options.methodName || '/submitData'),
+						url: location.origin + '/' + (options.methodName || 'submitData'),
 						contentType: 'application/json; charset=utf-8',
 						data: '{"data":"' + JSON.stringify(data).replace(/"/g, '\\\"') + '"}',
 						//data: '{data:'+ JSON.stringify(data)+'}',
