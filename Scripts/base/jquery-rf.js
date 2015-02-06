@@ -18,8 +18,9 @@
 					if (0 === $PageInfoContainer.children().size()) {
 						$PageInfoContainer.append($PageInfoContent);
 					} else {
-						if (0 === $PageInfoContainer.children('.RFShowInfoContent').size()) {
-							$PageInfoContainer.children(':nth-child(1)').addClass('RFShowInfoContent');
+						$PageInfoContent = $PageInfoContainer.children(':nth-child(1)');
+						if (!$PageInfoContent.hasClass('.RFShowInfoContent')) {
+							$PageInfoContent.addClass('RFShowInfoContent');
 						} else {}
 					}
 					var $PageInfoContainerOpacity = $PageInfoContainer.css('opacity');
